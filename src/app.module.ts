@@ -1,0 +1,22 @@
+import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { MongooseModule } from '@nestjs/mongoose';
+import { AuthModule } from './auth/auth.module';
+
+@Module({
+	imports: [
+		// EXTERNOS
+		ConfigModule.forRoot (),
+		MongooseModule.forRoot (process.env.MONGO_URI),
+		// PROPIOS
+		AuthModule,
+	],
+	controllers: [],
+	providers: [],
+})
+export class AppModule {
+
+	// constructor () {
+	// 	console.log (process.env);
+	// }
+}
