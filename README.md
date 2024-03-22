@@ -8,7 +8,6 @@ docker compose up -d
 2. Copiar el ```.env.template``` y renombrarlo a ```.env```
 
 3. Arrancar el Backend Nest
-
 ```
 npm run start:dev
 ```
